@@ -1,7 +1,8 @@
+# vim: set ft=sh:
+
 # Template file for 'linux-rk3588'
 pkgname=linux-rk3588
 version=6.9.0
-#rc_suffix="-rc1"
 revision=1
 short_desc="Linux kernel and modules (${version%.*} series)"
 maintainer="usagi-flow <usagi-flow@dev.null>"
@@ -31,7 +32,7 @@ preserve=yes
 hostmakedepends="tar xz bc elfutils-devel flex gmp-devel kmod libmpc-devel
  pkg-config openssl-devel perl uboot-mkimage cpio pahole python3 zstd"
 
-_kernver="${version}_${revision}" # _kernver="${version}${rc_suffix}"
+_kernver="${version}_${revision}"
 triggers="kernel-hooks"
 kernel_hooks_version="${_kernver}"
 
